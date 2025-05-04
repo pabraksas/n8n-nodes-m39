@@ -191,6 +191,20 @@ network-reset:
 	sudo systemctl restart NetworkManager --force
 
 
+dev:
+	rm -rf ./dist
+	npm run lint
+	npm run test
+	npm run build
+	make link
+	npm link
+	cd ~/.n8n/custom && npm link @devlikeapro/n8n-nodes-petstore && n8n start
+
+
+swagger-up:
+	wget -qO- https://petstore3.swagger.io/api/v3/openapi.json | jq '.' > ./nodes/Petstore/openapi.json
+
+
 cmd:
 	@echo $(filter-out $@,$(MAKECMDGOALS))
 
