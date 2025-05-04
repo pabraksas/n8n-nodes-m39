@@ -194,11 +194,9 @@ network-reset:
 dev:
 	rm -rf ./dist
 	npm run lint
-	npm run test
 	npm run build
-	make link
 	npm link
-	cd ~/.n8n/custom && npm link @devlikeapro/n8n-nodes-petstore && n8n start
+	# cd ~/.n8n && npm link @devlikeapro/n8n-nodes-petstore && n8n start
 
 
 swagger-up:

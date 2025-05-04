@@ -1,4 +1,4 @@
-import {INodeType, INodeTypeDescription} from 'n8n-workflow';
+import {INodeType, INodeTypeDescription, NodeConnectionType} from 'n8n-workflow';
 import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
 import * as doc from './openapi.json';
 
@@ -18,8 +18,8 @@ export class Petstore implements INodeType {
         defaults: {
             name: 'Petstore',
         },
-        inputs: ['main'],
-        outputs: ['main'],
+        inputs: ['main' as NodeConnectionType],
+        outputs: ['main' as NodeConnectionType],
         credentials: [
             {
                 name: 'petstoreApi',
