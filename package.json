@@ -1,12 +1,12 @@
 {
   "name": "n8n-nodes-m39",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "media39",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://media39.ru",
   "author": {
     "name": "Pavel Abraksas",
     "email": "Pavel.Abraksas@gmailcom"
